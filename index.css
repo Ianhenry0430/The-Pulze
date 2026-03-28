@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 185 100% 49%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 185 100% 49%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 185 100% 49%;
+    --chart-1: 185 100% 49%;
+    --chart-2: 45 100% 55%;
+    --chart-3: 140 70% 45%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 15 85% 55%;
+    --radius: 0.25rem;
+
+    --font-heading: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-body: 'Inter', sans-serif;
+
+    --tier-d1: 45 80% 55%;
+    --tier-d2: 210 80% 55%;
+    --tier-d3: 280 70% 55%;
+    --tier-naia: 140 70% 45%;
+    --tier-juco: 25 90% 55%;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 185 100% 49%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 185 100% 49%;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 185 100% 49%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 185 100% 49%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 185 100% 49%;
+    --chart-1: 185 100% 49%;
+    --chart-2: 45 100% 55%;
+    --chart-3: 140 70% 45%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 15 85% 55%;
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 185 100% 49%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 185 100% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .text-glow {
+    text-shadow: 0 0 20px hsl(185 100% 49% / 0.4);
+  }
+  .tier-accent-d1 { color: hsl(45 80% 55%); }
+  .tier-accent-d2 { color: hsl(210 80% 55%); }
+  .tier-accent-d3 { color: hsl(280 70% 55%); }
+  .tier-accent-naia { color: hsl(140 70% 45%); }
+  .tier-accent-juco { color: hsl(25 90% 55%); }
+  .tier-bg-d1 { background-color: hsl(45 80% 55%); }
+  .tier-bg-d2 { background-color: hsl(210 80% 55%); }
+  .tier-bg-d3 { background-color: hsl(280 70% 55%); }
+  .tier-bg-naia { background-color: hsl(140 70% 45%); }
+  .tier-bg-juco { background-color: hsl(25 90% 55%); }
+  .tier-border-d1 { border-color: hsl(45 80% 55%); }
+  .tier-border-d2 { border-color: hsl(210 80% 55%); }
+  .tier-border-d3 { border-color: hsl(280 70% 55%); }
+  .tier-border-naia { border-color: hsl(140 70% 45%); }
+  .tier-border-juco { border-color: hsl(25 90% 55%); }
+}
